@@ -3,10 +3,16 @@ local lsp_status = require'lsp-status'
 
 lsp_status.register_progress()
 
-local function custom_attach (client)
---    print("lsp attaching")
+local buf_map =  vim.api.nvim_buf_set_keymap
+
+local options = {noremap = true}
+
+local function custom_attach (client,  bufnm)
+    print("lsp attaching")
     lsp_status.on_attach(client)
---    print("lsp attached")
+    buf_map(bufnm, 'n', '<leader>dn', 'vim.lsp.diagnostic.goto_next()', options)
+    buf_map(bufnm, 'n', '<leader>dp', 'vim.lsp.diagnostic.goto_prev()', options)
+    print("lsp attached")
 end
 
 lsp.bashls.setup{
