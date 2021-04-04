@@ -10,8 +10,8 @@ local options = {noremap = true}
 local function custom_attach (client,  bufnm)
     print("lsp attaching")
     lsp_status.on_attach(client)
-    buf_map(bufnm, 'n', '<leader>dn', 'vim.lsp.diagnostic.goto_next()', options)
-    buf_map(bufnm, 'n', '<leader>dp', 'vim.lsp.diagnostic.goto_prev()', options)
+    buf_map(bufnm, 'n', '<leader>dn', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>', options)
+    buf_map(bufnm, 'n', '<leader>dp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>', options)
     print("lsp attached")
 end
 
