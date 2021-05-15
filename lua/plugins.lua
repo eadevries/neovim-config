@@ -18,6 +18,7 @@ paq{'nvim-lua/plenary.nvim'}
 paq{'nvim-telescope/telescope.nvim'}
 -- Theme
 paq{'gruvbox-community/gruvbox'}
+paq{'sainnhe/gruvbox-material'}
 -- Git integration
 paq{'tpope/vim-fugitive'}
 -- Vim dispatch
@@ -25,7 +26,7 @@ paq{'tpope/vim-dispatch'}
 
 -- Configure the Tree-sitter
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = 'all', highlight = {enable = true}
+    ensure_installed = 'maintained', highlight = {enable = true}
 }
 
 -- Use completion-nvim in every buffer
