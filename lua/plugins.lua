@@ -29,5 +29,3 @@ require'nvim-treesitter.configs'.setup {
     ensure_installed = 'maintained', highlight = {enable = true}
 }
 
--- Use completion-nvim in every buffer
-

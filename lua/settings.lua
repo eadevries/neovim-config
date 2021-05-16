@@ -13,6 +13,7 @@ o.incsearch = true
 o.scrolloff = 8
 o.secure = false
 o.termguicolors = true
+o.completeopt='menuone,noinsert,noselect'
 
 bo.tabstop = 4
 bo.softtabstop = 4

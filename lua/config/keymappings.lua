@@ -10,3 +10,6 @@ map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options)
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', options)
 map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', options)
 
+-- Keymaps for completion-nvim
+map('i', '<expr>', 'pumvisible() ? "<C-n>" : "<Tab>"', options)
+map('i', '<expr>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', options)

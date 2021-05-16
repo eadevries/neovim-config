@@ -12,6 +12,7 @@ local function custom_attach (client,  bufnm)
     lsp_status.on_attach(client)
     buf_map(bufnm, 'n', '<leader>dn', '<cmd>lua vim.lsp.diagnostic.goto_next()<cr>', options)
     buf_map(bufnm, 'n', '<leader>dp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>', options)
+    require'completion'.on_attach()
     print("lsp attached")
 end
 
